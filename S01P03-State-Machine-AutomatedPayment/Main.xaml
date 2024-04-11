@@ -1,0 +1,379 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="966.666666666667,883.333333333333" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="AutomatedPayments" sap:VirtualizedContainerService.HintSize="976.666666666667,818.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <StateMachine InitialState="{x:Reference __ReferenceID4}" DisplayName="State Machine" sap:VirtualizedContainerService.HintSize="934.666666666667,726.666666666667" sap2010:WorkflowViewState.IdRef="StateMachine_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <av:Point x:Key="ShapeLocation">410,2.4</av:Point>
+          <x:Double x:Key="StateContainerWidth">900.8000000000002</x:Double>
+          <x:Double x:Key="StateContainerHeight">690.8000000000001</x:Double>
+          <av:PointCollection x:Key="ConnectorLocation">440,77.6 440,107.6 436.08,107.6 436.08,121.6</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <State x:Name="__ReferenceID4" sap2010:Annotation.AnnotationText="Get initial balance of the account." DisplayName="Get Initial Balance" sap:VirtualizedContainerService.HintSize="238.666666666667,92" sap2010:WorkflowViewState.IdRef="State_6">
+        <State.Entry>
+          <Sequence DisplayName="Sequence - Initial Balance" sap:VirtualizedContainerService.HintSize="726,820" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Current Balance" sap:VirtualizedContainerService.HintSize="684,244.666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Current balance:" Title="Please insert a number">
+              <ui:InputDialog.Result>
+                <OutArgument x:TypeArguments="x:String">[InputValue]</OutArgument>
+              </ui:InputDialog.Result>
+            </ui:InputDialog>
+            <If Condition="[Double.TryParse(InputValue,0)]" DisplayName="If user input is valid" sap:VirtualizedContainerService.HintSize="684,443.333333333333" sap2010:WorkflowViewState.IdRef="If_3">
+              <If.Then>
+                <Assign DisplayName="Parse CurrentBalance" sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_5">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Double">[CurrentBalance]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Double">[Double.Parse(InputValue )]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Current balance not valid" sap:VirtualizedContainerService.HintSize="376,279.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" Buttons="Ok" DisplayName="Message Box current balance not valid" sap:VirtualizedContainerService.HintSize="334,85.3333333333333" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;The input is not valid.&quot;]" TopMost="True" />
+                  <Assign DisplayName="IsValidInput False" sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_6">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Boolean">[IsValidInput]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
+        </State.Entry>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">328.8,121.6</av:Point>
+            <av:Size x:Key="ShapeSize">238.666666666667,92</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Double x:Key="StateContainerWidth">204.7999999999996</x:Double>
+            <x:Double x:Key="StateContainerHeight">25</x:Double>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <State.Transitions>
+          <Transition DisplayName="Valid input" sap:VirtualizedContainerService.HintSize="451.333333333333,521.333333333333" sap2010:WorkflowViewState.IdRef="Transition_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <av:PointCollection x:Key="ConnectorLocation">448,214.4 448,244.4 447.52,244.4 447.52,293.6</av:PointCollection>
+                <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
+                <x:Int32 x:Key="DestConnectionPointIndex">34</x:Int32>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Transition.Condition>[IsValidInput]</Transition.Condition>
+            <Transition.To>
+              <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="Get payment value for current iteration." DisplayName="Get Payment value" sap:VirtualizedContainerService.HintSize="242,133.333333333333" sap2010:WorkflowViewState.IdRef="State_7">
+                <State.Entry>
+                  <Sequence DisplayName="Sequence - Payment Value" sap:VirtualizedContainerService.HintSize="726,820" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input from user" sap:VirtualizedContainerService.HintSize="684,244.666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_4" IsPassword="False" Label="Payment value:" Title="Please insert a number">
+                      <ui:InputDialog.Result>
+                        <OutArgument x:TypeArguments="x:String">[InputValue]</OutArgument>
+                      </ui:InputDialog.Result>
+                    </ui:InputDialog>
+                    <If Condition="[Double.TryParse(InputValue,0)]" DisplayName="If input is valid" sap:VirtualizedContainerService.HintSize="684,443.333333333333" sap2010:WorkflowViewState.IdRef="If_4">
+                      <If.Then>
+                        <Assign DisplayName="Parse CurrentBalance - Payment Value" sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_7">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Double">[PaymentValue]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Double">[Double.Parse(InputValue )]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Invalid Balance" sap:VirtualizedContainerService.HintSize="376,279.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" Buttons="Ok" DisplayName="Message Box current balance invalid" sap:VirtualizedContainerService.HintSize="334,85.3333333333333" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;The input is not valid.&quot;]" TopMost="True" />
+                          <Assign DisplayName="IsValidInput is False" sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_8">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Boolean">[IsValidInput]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </State.Entry>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">338.8,293.6</av:Point>
+                    <av:Size x:Key="ShapeSize">242,133.333333333333</av:Size>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Double x:Key="StateContainerWidth">208</x:Double>
+                    <x:Double x:Key="StateContainerHeight">52.080000000000155</x:Double>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <State.Transitions>
+                  <Transition DisplayName="Invalid Input" sap:VirtualizedContainerService.HintSize="451.333333333333,521.333333333333" sap2010:WorkflowViewState.IdRef="Transition_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:PointCollection x:Key="ConnectorLocation">435.44,426.4 435.44,456.4 442.96,456.4 442.96,609.2</av:PointCollection>
+                        <x:Int32 x:Key="SrcConnectionPointIndex">31</x:Int32>
+                        <x:Int32 x:Key="DestConnectionPointIndex">46</x:Int32>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Transition.Condition>[NOT IsValidInput]</Transition.Condition>
+                    <Transition.To>
+                      <State x:Name="__ReferenceID0" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="134,61.3333333333333" sap2010:WorkflowViewState.IdRef="State_9" IsFinal="True">
+                        <State.Entry>
+                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" Buttons="Ok" DisplayName="Message - Process End" sap:VirtualizedContainerService.HintSize="334,85.3333333333333" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[&quot;Process finished.&quot;]" TopMost="True" />
+                        </State.Entry>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">362.8,609.2</av:Point>
+                            <av:Size x:Key="ShapeSize">134,61.3333333333333</av:Size>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </State>
+                    </Transition.To>
+                  </Transition>
+                  <Transition DisplayName="Insufficient funds" sap:VirtualizedContainerService.HintSize="451.333333333333,521.333333333333" sap2010:WorkflowViewState.IdRef="Transition_7">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:PointCollection x:Key="ConnectorLocation">338.8,360 140,360 140,397.2</av:PointCollection>
+                        <x:Int32 x:Key="SrcConnectionPointIndex">37</x:Int32>
+                        <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Transition.Condition>[IsValidInput And CurrentBalance &lt;PaymentValue]</Transition.Condition>
+                    <Transition.To>
+                      <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Display message about payment denial." DisplayName="Deny Payment" sap:VirtualizedContainerService.HintSize="170.666666666667,106.666666666667" sap2010:WorkflowViewState.IdRef="State_10">
+                        <State.Entry>
+                          <ui:MessageBox Caption="{x:Null}" AutoCloseAfter="00:00:00" Buttons="YesNo" ChosenButton="[ContinueAnswer]" DisplayName="Message - Insufficient fund" sap:VirtualizedContainerService.HintSize="334,85.3333333333333" sap2010:WorkflowViewState.IdRef="MessageBox_8" Text="[&quot;The payment could not be processed due to insufficent funds. The current balance of your account is: &quot;+ CurrentBalance.ToString +&quot; Do you want to continue?&quot;]" TopMost="True" />
+                        </State.Entry>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">54.8,397.2</av:Point>
+                            <av:Size x:Key="ShapeSize">170.666666666667,106.666666666667</av:Size>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            <x:Double x:Key="StateContainerWidth">136.7999999999999</x:Double>
+                            <x:Double x:Key="StateContainerHeight">25</x:Double>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <State.Transitions>
+                          <Transition DisplayName="Stop" sap:VirtualizedContainerService.HintSize="451.333333333333,521.333333333333" sap2010:WorkflowViewState.IdRef="Transition_9">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:PointCollection x:Key="ConnectorLocation">140.133333333333,503.866666666667 140.133333333333,621.466666666667 362.8,621.466666666667</av:PointCollection>
+                                <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
+                                <x:Int32 x:Key="DestConnectionPointIndex">13</x:Int32>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Transition.To>
+                              <x:Reference>__ReferenceID0</x:Reference>
+                            </Transition.To>
+                            <Transition.Condition>[ContinueAnswer.Equals("No")]</Transition.Condition>
+                          </Transition>
+                          <Transition DisplayName="Continue" sap:VirtualizedContainerService.HintSize="451.333333333333,521.333333333333" sap2010:WorkflowViewState.IdRef="Transition_11">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:PointCollection x:Key="ConnectorLocation">225.2,460.56 375.04,460.56 375.04,426.4</av:PointCollection>
+                                <x:Int32 x:Key="SrcConnectionPointIndex">44</x:Int32>
+                                <x:Int32 x:Key="DestConnectionPointIndex">11</x:Int32>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Transition.To>
+                              <x:Reference>__ReferenceID1</x:Reference>
+                            </Transition.To>
+                            <Transition.Condition>[ContinueAnswer.Equals("Yes")]</Transition.Condition>
+                          </Transition>
+                        </State.Transitions>
+                        <State.Variables>
+                          <Variable x:TypeArguments="x:String" Name="ContinueAnswer" />
+                        </State.Variables>
+                      </State>
+                    </Transition.To>
+                  </Transition>
+                  <Transition DisplayName="Sufficient funds" sap:VirtualizedContainerService.HintSize="429.6,509.6" sap2010:WorkflowViewState.IdRef="Transition_8">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:PointCollection x:Key="ConnectorLocation">580.4,360 767.24,360 767.24,399.2</av:PointCollection>
+                        <x:Int32 x:Key="SrcConnectionPointIndex">36</x:Int32>
+                        <x:Int32 x:Key="DestConnectionPointIndex">42</x:Int32>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Transition.Condition>[IsValidInput AND CurrentBalance &gt;=PaymentValue]</Transition.Condition>
+                    <Transition.To>
+                      <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Display message about payment and new balance." DisplayName="Make Payment" sap:VirtualizedContainerService.HintSize="185.333333333333,106.666666666667" sap2010:WorkflowViewState.IdRef="State_11">
+                        <State.Entry>
+                          <Sequence DisplayName="Sequence - Display Current Balance" sap:VirtualizedContainerService.HintSize="376,279.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign DisplayName="ReAssign CurrentBalance" sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_9">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Double">[CurrentBalance]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Double">[CurrentBalance -PaymentValue]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:MessageBox Caption="{x:Null}" AutoCloseAfter="00:00:00" Buttons="YesNo" ChosenButton="[ContinueAnswer]" DisplayName="Message - Payment Successfull" sap:VirtualizedContainerService.HintSize="334,85.3333333333333" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[&quot;The payment was processed successfully. The new balance of your account is: &quot;+ CurrentBalance.ToString +&quot; Do you want to continue?&quot;]" TopMost="True" />
+                          </Sequence>
+                        </State.Entry>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">665.6,399.2</av:Point>
+                            <av:Size x:Key="ShapeSize">185.333333333333,106.666666666667</av:Size>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            <x:Double x:Key="StateContainerWidth">151.19999999999936</x:Double>
+                            <x:Double x:Key="StateContainerHeight">25</x:Double>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <State.Transitions>
+                          <Transition DisplayName="Stop" sap:VirtualizedContainerService.HintSize="429.6,509.6" sap2010:WorkflowViewState.IdRef="Transition_10">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:PointCollection x:Key="ConnectorLocation">758.266666666667,505.866666666667 758.266666666667,624.533333333333 496.133333333333,624.533333333333</av:PointCollection>
+                                <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
+                                <x:Int32 x:Key="DestConnectionPointIndex">16</x:Int32>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Transition.To>
+                              <x:Reference>__ReferenceID0</x:Reference>
+                            </Transition.To>
+                            <Transition.Condition>[ContinueAnswer.Equals("No")]</Transition.Condition>
+                          </Transition>
+                          <Transition DisplayName="Continue" sap:VirtualizedContainerService.HintSize="429.6,509.6" sap2010:WorkflowViewState.IdRef="Transition_12">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:PointCollection x:Key="ConnectorLocation">665.6,457.28 507.92,457.28 507.92,426.4</av:PointCollection>
+                                <x:Int32 x:Key="SrcConnectionPointIndex">41</x:Int32>
+                                <x:Int32 x:Key="DestConnectionPointIndex">55</x:Int32>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Transition.To>
+                              <x:Reference>__ReferenceID1</x:Reference>
+                            </Transition.To>
+                            <Transition.Condition>[ContinueAnswer.Equals("Yes")]</Transition.Condition>
+                          </Transition>
+                        </State.Transitions>
+                        <State.Variables>
+                          <Variable x:TypeArguments="x:String" Name="ContinueAnswer" />
+                        </State.Variables>
+                      </State>
+                    </Transition.To>
+                  </Transition>
+                </State.Transitions>
+              </State>
+            </Transition.To>
+          </Transition>
+          <Transition DisplayName="Input not valid" sap:VirtualizedContainerService.HintSize="451.333333333333,521.333333333333" sap2010:WorkflowViewState.IdRef="Transition_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <av:PointCollection x:Key="ConnectorLocation">328.8,177.28 298.8,177.28 298.8,636.92 362.8,636.92</av:PointCollection>
+                <x:Int32 x:Key="SrcConnectionPointIndex">45</x:Int32>
+                <x:Int32 x:Key="DestConnectionPointIndex">33</x:Int32>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Transition.To>
+              <x:Reference>__ReferenceID0</x:Reference>
+            </Transition.To>
+            <Transition.Condition>[NOT IsValidInput]</Transition.Condition>
+          </Transition>
+        </State.Transitions>
+      </State>
+      <x:Reference>__ReferenceID1</x:Reference>
+      <x:Reference>__ReferenceID0</x:Reference>
+      <x:Reference>__ReferenceID2</x:Reference>
+      <x:Reference>__ReferenceID3</x:Reference>
+      <StateMachine.Variables>
+        <Variable x:TypeArguments="x:Boolean" Default="True" Name="IsValidInput" />
+        <Variable x:TypeArguments="x:String" Name="InputValue" />
+        <Variable x:TypeArguments="x:Double" Name="CurrentBalance" />
+        <Variable x:TypeArguments="x:Double" Name="PaymentValue" />
+      </StateMachine.Variables>
+    </StateMachine>
+  </Sequence>
+</Activity>
