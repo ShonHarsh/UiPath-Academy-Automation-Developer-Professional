@@ -13,9 +13,21 @@ S01P00 State Machines in Studio
   S01P03 Build Process with State Machines
   S01P04 Practice - Creating a Vending Machine
   S01P05 State Machine Best Practices
-  S01P06 Knowledge Check
+  S01P06 Check your knowledge
   S01P07 Learning Resources
 S02P00 Introduction to Robotic Enterprise Framework
+  S02P01 Recap: Transactions and types of processes
+  S02P02 The dispatcher and performer (producer and consumer) model
+  S02P03 Introducing the REFramework template
+  S02P04 Overview of the automation project and the main workflow
+  S02P05 The Initialization state and the Configuration file
+  S02P06 The Get Transaction Data state
+  S02P07 The Process Transaction and End Process states
+  S02P08 Execution and logging
+  S02P09 System and business exception handling
+  S02P10 Concurrent queue consumption
+  S02P11 Check your knowledge
+  S02P12 Learning resources
 S03P00 Building a REFramework Project with Orchestrator Queues
 S04P00 Building a REFramework Project with Tabular Data
 S05P00 Practice with REFramework
@@ -105,7 +117,7 @@ Incorporate the following best practices while working with State Machines:
 - Testing and Validation: Thoroughly test your State Machine with various scenarios to ensure that it behaves as expected. Validate its performance, handling of different conditions, and response to exceptions.
 - Documentation: Provide clear documentation for your State Machine, explaining its purpose, states, transitions, and usage guidelines. Proper documentation helps with knowledge transfer and maintenance.
 
-###### S01P06 Knowledge Check
+###### S01P06 Check your knowledge
 
 Question 01/08 Review Question : To improve readability, variable and argument names must align to a naming convention. If a variable is written as FirstName, then what is the naming convention followed?
 
@@ -180,6 +192,134 @@ Question 08/08 What is a Self-Transition?
 - Microsoft.NET Documentation - [State Machine Workflows](https://learn.microsoft.com/en-us/dotnet/framework/windows-workflow-foundation/state-machine-workflows#state-machine-terminology)
 
 ## S02P00 Introduction to Robotic Enterprise Framework
+
+###### S02P01 Recap: Transactions and types of processes
+
+Types of business processes
+- **Linear** - Steps are run once on a single data set
+- **Iterative** - Steps are performed multiple times, each on different data
+- **Transactional** - Steps are performed multiple times on different data but the automation design is such that each repeatable part processes independently.
+
+What is a transaction? A transaction represents the minimum (atomic) amount of data and the necessary steps required to process the data, by fulfilling a section of a business process. A typical example would be a process that reads a single email from a mailbox and extracts data from it.
+
+We call the data atomic because once it is processed, the assumption is that we no longer need it as we advance with the business process.
+
+Question 01/01 Match the description of the process with the right transaction processing model.
+1. Linear - Creating an account for a new hire, based on an email.
+2. Iterative - Creating accounts for the new hires from an Excel file sent via email.
+3. Transactional - Creating accounts for the new hires in a live Excel file, where entries are added hourly.
+
+###### S02P02 The dispatcher and performer (producer and consumer) model
+
+- **The Dispatcher** (Producer) reads rows from the input spreadsheet and adds the data (i.e., name and email) to a queue; each queue item will have both name and email from one spreadsheet row.
+- **The Performer** (Consumer) retrieves an item from the same queue and does the necessary actions using that data, like replacing template values and sending an email.
+
+A queue is in between the dispatcher and performer.
+
+- Data Source -> **Dispatcher** -> Multi-threaded queues
+- Queues <-> **Performer**
+
+The advantages of the Dispatcher and Performer model using REFramework :
+- Better separation of actions (between dispatcher/producer or performer/consumer).
+- Better separation and distinction between architecture and process layers.
+- Built-in error handling and retry mechanism.
+- Possibility to run processes across several machines (availability and scalability).
+- Better reusability within the project's created components.
+- Improved built-in configuration and Orchestrator integration.
+- Automation projects created previously without ReFramework can be easily adapted and deployed using the Dispatcher and Performer model.
+
+Question 01/01 In a standard Dispatcher/Performer implementation, which type of process updates the status of a queue item?
+1. Dispatcher
+2. Performer [Correct]
+
+###### S02P03 Introducing the REFramework template
+
+**The Robotic Enterprise Framework (REFramework)** is a UiPath Studio template of state machines built to best practices regarding logging, exception handling, application initialization, and being ready to tackle any business scenario. It has containers for initializing applications, retrieving input data, processing the data, and ending the transaction
+
+REFramework States - Initialization, Get Transaction Data, Process Transaction, End Process
+
+- UiPath Documentation - [Robotic Enterprise Framework](https://docs.uipath.com/studio/standalone/2022.10/user-guide/robotic-enterprise-framework)
+
+Question 01/01 Match each state with its corresponding description.
+1. Initialization - Read the configuration file and initialize the applications used in the process.
+2. Get Transaction Data - Get the next transaction to be processed.
+3. Process Transaction - Process a single transaction.
+4. End Process - Finalize the process and close all applications used.
+
+###### S02P04 Overview of the automation project and the main workflow
+
+```
+UiPath Project: S02P04-REFramework-Introduction
+```
+
+Main Takeaways
+- The overall organization of the template makes it easier to build upon it and is a good starting point for any process.
+- Depending on certain conditions, the execution can transition from one state to another to represent the steps of a process.
+- Several benefits of using the template stand out: a consistent model which enables development standards, better visibility of actions and events, and ease of the development effort.
+
+```
+File Resource: S02P04-REFramework Documentation-EN-2022.10.pdf
+```
+
+Question 01/01 If no data is found during the execution of the Get Transaction Data state, what state does the process transition to next?
+Initialization
+Process Transaction
+End Process [Correct]
+Get Transaction Data
+
+###### S02P05 The Initialization state and the Configuration file
+
+
+
+###### S02P06 The Get Transaction Data state
+
+
+
+###### S02P07 The Process Transaction and End Process states
+
+
+
+###### S02P08 Execution and logging
+
+
+
+###### S02P09 System and business exception handling
+
+
+
+###### S02P10 Concurrent queue consumption
+
+
+
+###### S02P11 Check your knowledge
+
+
+
+###### S02P12 Learning resources
+
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+
+
 
 Question 01/15 In the Initialization state, all the necessary applications have been initialized and the settings required for the process have been read. Which transition is executed next?
 

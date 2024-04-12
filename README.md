@@ -4,6 +4,8 @@
 
 This project is a study guide to support the UiPath Automation Developer Professional course.  The course is free at the [UiPath Academy](https://www.uipath.com/rpa/academy).  There are many courses and even a survey (at present, a "Take the career guidance survey: button) you can take and AI will suggest where to start.
 
+**Note:** This content does not replace the training in the UiPath Academy.  This is meant as a supplement for review.
+
 #### Learning Plan: Automation Developer Professional Training
 #### URL: https://academy.uipath.com/learning-plans/automation-developer-professional-training
 
