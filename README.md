@@ -31,7 +31,6 @@ You are most likely familiar with markdown, however for the sake of clarity, it 
 - [Atom](https://atom-editor.cc/) - While the IDE Atom has been archived, it still works and performs well.  This is my favorite interface for markdown.
 - [Atom GitHub](https://github.com/atom/atom) - The GitHub page for Atom.  I am adding it here should the official page go offline.
 - [MarkText](https://www.marktext.cc/) - A very lightweight markdown viewer.
-- [Obsidian](https://obsidian.md/) - Obsidian is the private and flexible writing app that adapts to the way you think.  This is more sophisticated but also displays markdown.
 - [Sublime Text](https://www.sublimetext.com/) - A popular text editor that works also.
 - [Visual Studio Code](https://code.visualstudio.com/) - VSCode should need no introduction.
 
