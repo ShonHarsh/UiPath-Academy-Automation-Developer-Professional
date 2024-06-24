@@ -1,4 +1,4 @@
-![](https://shonharsh.github.io/curriculum-vitae/images/banner-uipath.png)
+![](https://shonharsh.github.io/curriculum-vitae/Images/Banner-UiPath-01.png)
 
 # UiPath Academy Automation Developer Professional
 
@@ -28,8 +28,8 @@ Module "State Machines in Studio" completed.
 ###### Markdown
 You are most likely familiar with markdown, however for the sake of clarity, it is a lightweight formatting language.  It is viewable and even quite readable in a text editor but viewing markdown interpreted as it is intended is even better.  Some markdown viewers are:
 
-- [Atom](https://atom-editor.cc/) - While the IDE Atom has been archived, it still works and performs well.  This is my favorite interface for markdown.
-- [Atom GitHub](https://github.com/atom/atom) - The GitHub page for Atom.  I am adding it here should the official page go offline.
+- [Atom Editor](https://atom-editor.cc/) - While the IDE Atom has been archived, it still works and performs well.  This is my favorite interface for markdown.
+- [Atom Editor GitHub](https://github.com/atom/atom) - The GitHub page for Atom.  I am adding it here should the official page go offline.
 - [MarkText](https://www.marktext.cc/) - A very lightweight markdown viewer.
 - [Sublime Text](https://www.sublimetext.com/) - A popular text editor that works also.
 - [Visual Studio Code](https://code.visualstudio.com/) - VSCode should need no introduction.
@@ -39,15 +39,19 @@ A standard UiPath, Studio to Orchestrator cloud setup is the base of operation. 
 1. An Orchestrator connection - Visit https://cloud.uipath.com/ and authenticate or sign up.
 2. [UiPath Studio](https://www.uipath.com/product/studio) is used to run the robot.  Note that Studio Web can be used directly in Orchestrator but I recommend installing the Studio IDE application.
 
+[![UiPath Setup Guide](https://shonharsh.github.io/curriculum-vitae/Images/Title-UiPath-Setup-Guide.png)](https://github.com/ShonHarsh/UiPath-SetupGuide)
+
 ### Git Notes
 
 Clone the project to develop or change it.
 
-`git clone https://github.com/ShonHarsh/UiPath-Academy-Automation-Developer-Professional`
+```sh
+git clone https://github.com/ShonHarsh/UiPath-Academy-Automation-Developer-Professional
+```
 
 ### Links
 - [UiPath Automation Platform](https://www.uipath.com/)
-- [UiPath Studio](https://www.uipath.com/product/studio)
+- [UiPath Studio](https://www.uipath.com/product/studio)- [Pulsar](https://pulsar-edit.dev/) (Atom Successor) - Used for all my README.md files
 - [Shon Harsh Website 127.0.0.1](https://shonharsh.github.io/curriculum-vitae/index.html)
 - [This.GitHub](https://github.com/shonharsh)
 - [LinkedIn](https://www.linkedin.com/in/shonharsh/)
